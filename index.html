@@ -266,7 +266,7 @@
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
 
-      countdown.innerHTML = `⏳ Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
+      countdown.innerHTML = `⏳ Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos 👼`;
     }
 
     setInterval(updateCountdown, 1000);
@@ -274,8 +274,8 @@
 
     function confirmarAsistencia() {
       confetti({
-        particleCount: 100,
-        spread: 70,
+        particleCount: 1000,
+        spread: 700,
         origin: { y: 0.6 }
       });
       window.open('https://forms.gle/tuFormularioSI', '_blank');
@@ -294,20 +294,20 @@ function mostrarCampoNombre(tipo) {
 function enviarWhatsApp() {
   const nombre = document.getElementById("nombreInvitado").value.trim();
   if (!nombre) {
-    alert("Por favor escribe tu nombre.");
+    alert("Por favor escribe tu nombre complato.");
     return;
   }
 
   let mensaje = "";
   if (tipoConfirmacion === "si") {
     confetti({
-      particleCount: 100,
-      spread: 70,
+      particleCount: 1000,
+      spread: 700,
       origin: { y: 0.6 }
     });
-    mensaje = `¡Hola! Soy ${nombre} y confirmo mi asistencia al Baby Shower de Liam 🎉🍼`;
+    mensaje = `¡Hola! 🤗​ Soy ${nombre} y confirmo mi asistencia al Baby Shower de Liam 🎉🍼🦖​`;
   } else {
-    mensaje = `Hola, soy ${nombre} y lamentablemente no podré asistir al Baby Shower de Liam 😔`;
+    mensaje = `Hola, 🥲​ soy ${nombre} y lamentablemente no podré asistir al Baby Shower de Liam 😔💔​`;
   }
 
   const url = `https://wa.me/525554150979?text=${encodeURIComponent(mensaje)}`;
@@ -320,3 +320,4 @@ function enviarWhatsApp() {
 
 </body>
 </html>
+
